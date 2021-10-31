@@ -1,0 +1,16 @@
+{
+  "all": {
+    "sourceCodeDir": "frontend",
+    "entrypointsDir": "src",
+    "watchAdditionalPaths": []
+  },
+  "development": {
+    "autoBuild": true,
+    "port": 7101
+  },
+  "test": {
+    "autoBuild": true,
+    "publicOutputDir": "vite-test",
+    "port": 7101
+  }
+}
