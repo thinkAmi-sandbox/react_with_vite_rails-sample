@@ -1,10 +1,12 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import Home from "./components/Hello";
+import Hello from "./components/Hello";
+import CurrentTime from "./components/CurrentTime";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Home />
+        <Hello />
+        <CurrentTime />
     </React.StrictMode>,
     document.getElementById('root')
 )
