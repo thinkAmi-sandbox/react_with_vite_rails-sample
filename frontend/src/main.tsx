@@ -1,28 +1,14 @@
-import ReactDOM from "react-dom";
 import React from "react";
-import {Switch} from "react-router"
-import {BrowserRouter, Route} from "react-router-dom";
-import HelloPage from "./pages/HelloPage";
-import AboutPage from "./pages/AboutPage";
-import NotFound from "./pages/NotFound";
+import {createRoot} from "react-dom/client";
+import App from "./App";
+import {BrowserRouter} from "react-router-dom";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Switch>
-                <Route path="/about">
-                    <AboutPage />
-                </Route>
-
-                <Route exact path="/">
-                    <HelloPage />
-                </Route>
-
-                <Route>
-                    <NotFound />
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
+const container = document.getElementById('root')
+const root = createRoot(container!)
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
+  </React.StrictMode>
 )
