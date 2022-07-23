@@ -3,14 +3,14 @@
 ## Tested Environment
 
 - Backend
-  - Ruby 3.0.1
-  - Rails 6.1.4.1
-  - vite_rails 3.0.1
+  - Ruby 3.1.2
+  - Rails 7.0.3
+  - vite_rails 3.0.10
 - Frontend 
-  - TypeScript 4.4.4 
-  - React.js 17.0.2
-  - React Router 5.2.1
-  - Vite.js 2.6.13
+  - TypeScript 4.7.4 
+  - React.js 18.2.0
+  - React Router 6.3.0
+  - Vite.js 3.0.2
 
 　  
 ## Related Blog (Written in Japanese)
