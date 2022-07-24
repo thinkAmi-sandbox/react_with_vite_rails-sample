@@ -4,7 +4,7 @@
 
 - Backend
   - Ruby 3.1.2
-  - Rails 7.0.3
+  - Rails 7.0.3.1
   - vite_rails 3.0.10
 - Frontend 
   - TypeScript 4.7.4 
@@ -18,3 +18,4 @@
 - [React + Rails + Vite.js なSPAアプリをモノレポで作ってみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2021/10/31/232038)
 - [React + Rails + Vite.js なSPAアプリを、RubyMineを使ってReactとRailsの両方をデバッグしてみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2022/05/30/220809)
 - [Rails製APIにて、JavaScriptの fetch() に対してリダイレクト的なステータスコードを返したい時はどうすればよいか調べてみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2022/06/11/223120)
+- [Rails + React + OpenAPI な環境で、クエリパラメータに配列を指定する時に調べたことをまとめてみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2022/07/24/223740)
