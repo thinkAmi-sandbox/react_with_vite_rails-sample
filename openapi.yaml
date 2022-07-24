@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: React With Vite Rails API
+  description: react_with_vite_rails リポジトリのAPIスキーマです
+  version: 0.0.1
+servers:
+  - url: http://localhost:7100
+    description: 開発環境
+tags:
+  - name: array_in_query_params
+    description: Arrayをクエリ文字列に入れるAPI
+components:
+  schemas:
+    Fruit:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          description: 果物の名前
+    FruitsResponse:
+      type: object
+      description: |
+        果物名を配列で返す時のレスポンス型
+      required:
+        - fruits
+      properties:
+        fruits:
+          type: array
+          items:
+            $ref: '#/components/schemas/Fruit'
+
+paths:
+  /api/array_in_query_params/fruits:
+    get:
+      summary: |
+        Arrayをクエリ文字列に入れてリクエストするAPI
+      # operationIdを設定しないと `apiArrayInQueryParamsFruitsGet` のような名前になるため分かりづらい
+      operationId: fetchArrayInQueryParamsFruits
+      tags:
+        - array_in_query_params
+      parameters:
+        - name: names[]
+          in: query
+          required: false
+          description: |
+            果物の名前のリスト
+          schema:
+            type: array
+            items:
+              type: string
+          style: form
+          explode: true
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FruitsResponse'
