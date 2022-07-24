@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     namespace :try_redirect do
       resources :fruits, only: [:show]
     end
+
+    namespace :array_in_query_params do
+      resources :fruits, only: [:index, :create]
+    end
   end
 
   # マッチしないルートはフロントに流す

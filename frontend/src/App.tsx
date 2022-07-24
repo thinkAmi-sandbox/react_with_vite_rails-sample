@@ -4,6 +4,7 @@ import AboutPage from "./pages/AboutPage";
 import HelloPage from "./pages/HelloPage";
 import NotFound from "./pages/NotFound";
 import RedirectIndex from "./pages/try_redirect/RedirectIndex";
+import ArrayInQueryParamsIndex from "./pages/array_in_query_params/ArrayInQueryParamsIndex";
 
 const Component = (): JSX.Element => {
 
@@ -16,6 +17,10 @@ const Component = (): JSX.Element => {
 
         <Route path="try-redirect">
           <Route index element={<RedirectIndex />} />
+        </Route>
+
+        <Route path="array-in-query-params">
+          <Route index element={<ArrayInQueryParamsIndex />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />

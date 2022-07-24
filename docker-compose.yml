@@ -1,0 +1,17 @@
+version: '3'
+services:
+  openapi_typescript_axios:
+    image: openapitools/openapi-generator-cli:v6.0.1
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g typescript-axios -o local/frontend/src/types/typescript-axios
+  openapi_ruby_typhoeus:
+    image: openapitools/openapi-generator-cli:v6.0.1
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g ruby -o local/openapi/gems/typhoeus --library=typhoeus
+  openapi_ruby_faraday:
+    image: openapitools/openapi-generator-cli:v6.0.1
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g ruby -o local/openapi/gems/faraday --library=faraday

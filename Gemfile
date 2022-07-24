@@ -38,3 +38,18 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'vite_rails'
+
+group :test do
+  gem 'committee-rails'
+  gem 'rspec-rails', '~> 6.0.0.rc1'
+end
+
+# OpenAPI Rubyクライアントからのアクセス
+# typhoeus版
+# gem 'openapi_client', path: './openapi/gems/typhoeus'
+
+# faraday版
+# gem 'openapi_client', path: './openapi/gems/faraday'
+
+# 素のfaraday
+gem 'faraday'
